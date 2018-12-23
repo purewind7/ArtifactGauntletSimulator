@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Artifact Gauntlet Simulator</title>
+    <script src="src/main.js"></script>
+</head>
+<body>
+<div>
+    <b>Test player number: </b>
+    <input id="playerNumber" type="number" value="10000" />
+    <br>
+    <b>Average money spent: </b>
+    <input id="averageMoney" type="number" value="100" />
+    <br>
+    <b>Standard deviation of players' win rate (how disperse are the players' win rate): </b>
+    <input id="sigmaOfCap" type="number" value="0.1" />
+    <br>
+    <b>Tracking player win rate(from 0 to 1) : </b>
+    <input id="trackPCapacity" type="number" value ="0.5" min="0" max="1" step="0.01"/>
+    <br>
+    <b>How much money is this player spending on tickets: </b>
+    <input id="trackPMoney" type="number" value="100" min="1" step="1">
+    <br>
+    <input id="startButton" type="submit" value="START">
+</div>
+<h3>Player Tracking:</h3>
+<div>
+    How good is this player? (from 0 to 1): <b id="playerCap"></b>
+    <br>
+    Match played: <b id="matchPlayed"></b>
+    Gauntlet participated: <b id="gParticipated"></b>
+    <br>
+    Money spent on tickets: <b id="moneySpent"></b>
+    Pack the player got: <b id="packGot"></b>
+    <br>
+    Price for each pack tracked player pay: <b id="trackPPriceEachPack"></b>
+    <p>
+        | 0-2: <b id="zeroWin"></b>
+        | 1-2: <b id="oneWin"></b>
+        | 2-2: <b id="twoWin"></b>
+        | 3-2: <b id="threeWin"></b>
+        | 4-2: <b id="fourWin"></b>
+        | 5-1: <b id="fiveOne"></b>
+        | 5-0: <b id="fiveZero"></b> |
+    </p>
+</div>
+<div>
+    <h2><b id="playerNum"></b> Player in sum: </h2>
+    <div>
+        <h3>Total gauntlet rounds: </h3>
+        <p id="totalGauntletRound"></p>
+    </div>
+    <div>
+        <h3>Total matches: </h3>
+        <p id="totalMatchRound"></p>
+    </div>
+    <div>
+        <h3>Total money spent: </h3>
+        <p id="totalMoney"></p>
+    </div>
+    <div>
+        <h3>Total packs rewarded: </h3>
+        <p id="totalPack"></p>
+    </div>
+    <div>
+        <h3>Average price for each pack in this gauntlet test: </h3>
+        <p id="priceEachPack"></p>
+    </div>
+</div>
+
+<div>
+    <div height="400" width="600" style="margin:50px">
+        <canvas id="barChart"> 你的浏览器不支持HTML5 canvas </canvas>
+    </div>
+</div>
+</body>
+</html>
