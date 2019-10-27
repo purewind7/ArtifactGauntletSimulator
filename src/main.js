@@ -1,3 +1,5 @@
+//TODO I should use TS and Angular...
+
 function getNumberInNormalDistribution(mean,std_dev){
     return mean+(randomNormalDistribution()*std_dev);
 }
